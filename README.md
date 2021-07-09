@@ -32,7 +32,7 @@ Equivalent implementation in full Python with multiprocessing support
 
 Notes:
 - `<source dir>`: path to source directory where the csv files are stored
-- `<match threshol\>`: two column headers are considered to match when their similarity is equal or over the provided threshold
+- `<match threshol>`: two column headers are considered to match when their similarity is equal or over the provided threshold
 - `<output file>`: file name (without path) where the matches will be stored. By default, the file will be saved in the `source dir`.
 - `<parallelism>`: level of parallelism (think of number of CPU cores roughly) available to the program
 - In the source dir you will also find a log file named `examined_pairs_of_files.log` that retains the progress of the comparisons and is used to resume from the current state after a failure.
