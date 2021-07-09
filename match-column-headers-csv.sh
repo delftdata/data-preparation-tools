@@ -16,8 +16,8 @@ then
 	do
 		examined_pairs_of_files+=($line)
 	done <$log_file
-	echo "Found and read log file $log_file:"
-	printf '  %s\n' "${examined_pairs_of_files[@]}"
+	# echo "Found and read log file $log_file:"
+	# printf '  %s\n' "${examined_pairs_of_files[@]}"
 	pairs_flushed_to_log=${#examined_pairs_of_files[@]}
 fi
 
@@ -43,7 +43,7 @@ do
 			#echo "pair file header: $pair_file_header"
 
 			# Pass the two headers to the matcher for comparison
-			python3 $current_dir/fuzzy_match.py "$file" \
+			python $current_dir/fuzzy_match.py "$file" \
 				"$pair_file" $file_header $pair_file_header \
 				$match_threshold
 		fi

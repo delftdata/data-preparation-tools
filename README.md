@@ -24,6 +24,6 @@ Example usage:
 
 # Dependencies
 
-- Python 3
+- Python version 3 (should be the default of `python` command)
 - Python Library fuzzywuzzy
   - install with `pip install fuzzywuzzy[speedup]`

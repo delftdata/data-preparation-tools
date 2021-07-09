@@ -10,7 +10,7 @@ do
 	base_filename=`basename -- "$file" .parquet`
 	if [ ! -f "$dest_data_folder/$base_filename.csv" ];
 	then
-		python3 $current_dir/parquet-to-csv.py $dest_data_folder $base_filename
+		python $current_dir/parquet-to-csv.py $dest_data_folder $base_filename
 		echo "Created file $dest_data_folder/$base_filename.csv"
 	fi
 done
