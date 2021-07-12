@@ -26,16 +26,16 @@ Example usage:
 
 # Find similarity between column headers of CSV files (faster)
 
-Equivalent implementation in full Python with multiprocessing support
+Equivalent implementation in full Python with multiprocessing and index support
 
 `python match-column-headers-csv.py <source dir> <match threshold> <output file> <parallelism>`
 
 Notes:
 - `<source dir>`: path to source directory where the csv files are stored
-- `<match threshol>`: two column headers are considered to match when their similarity is equal or over the provided threshold
+- `<match threshold>`: two column headers are considered to match when their similarity is equal or over the provided threshold
 - `<output file>`: file name (without path) where the matches will be stored. By default, the file will be saved in the `source dir`.
 - `<parallelism>`: level of parallelism (think of number of CPU cores roughly) available to the program
-- In the source dir you will also find a log file named `examined_pairs_of_files.log` that retains the progress of the comparisons and is used to resume from the current state after a failure.
+- In the source dir you will also find an index file named `file_column_headers.index` that stores the name of each file and its header columns in CSV format. It is uded to build an in-memory index for boosting performance.
 
 Example usage:
 
